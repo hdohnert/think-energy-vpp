@@ -6,20 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Think Energy VPP</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <header>
+  <header class="navbar">
+    <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy Logo" class="logo" />
     <nav>
-      <img src="https://i.imgur.com/ckI6Pqq.jpeg" alt="Think Energy Logo" class="logo" />
-      <ul>
-        <li><a href="#promise">Our Promise</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-      </ul>
+      <a href="#promise">Our Promise</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faqs">FAQs</a>
     </nav>
   </header>
 
@@ -31,77 +29,66 @@
   </section>
 
   <section class="section" id="promise">
-    <div class="container">
-      <h2>Our Promise</h2>
-      <p>Think Energy gives you a battery for your home without the massive upfront cost. Stay powered. Stay secure. Join our Virtual Power Plant.</p>
-    </div>
+    <h2>Our Promise</h2>
+    <p>Think Energy gives you a battery for your home without the massive upfront cost. Stay powered. Stay secure. Join our Virtual Power Plant.</p>
   </section>
 
-  <section class="section" id="pricing">
-    <div class="container">
-      <h2>Transparent, Simple Pricing</h2>
-
-      <div class="pricing-grid">
-        <div class="card">
-          <h3>20 kWh Plan</h3>
-          <div class="price">$20/mo</div>
+  <section class="section pricing" id="pricing">
+    <h2>Transparent, Simple Pricing</h2>
+    <div class="pricing-grid">
+      <div class="card">
+        <h3>20 kWh Plan</h3>
+        <p class="price">$20/mo</p>
+        <ul>
+          <li>Storm-proof backup</li>
+          <li>No installation fee</li>
+          <li>9¢ / kWh usage rate</li>
+        </ul>
+        <button class="toggle-button">Learn more ▼</button>
+        <div class="details">
           <ul>
-            <li>Storm-proof backup</li>
-            <li>No installation fee</li>
-            <li>9¢ / kWh usage rate</li>
+            <li>20–30 hours of backup with reduced energy use</li>
+            <li>36-month term</li>
+            <li>Join a cleaner, more stable grid</li>
           </ul>
-          <button class="toggle-button">Learn more ▼</button>
-          <div class="details">
-            <ul>
-              <li>20–30 hours of backup with reduced energy use</li>
-              <li>36-month term</li>
-              <li>Join a cleaner, more stable grid</li>
-            </ul>
-          </div>
         </div>
+      </div>
 
-        <div class="card">
-          <h3>40 kWh Plan</h3>
-          <div class="price">$40/mo</div>
+      <div class="card">
+        <h3>40 kWh Plan</h3>
+        <p class="price">$40/mo</p>
+        <ul>
+          <li>Twice the backup storage</li>
+          <li>No installation fee</li>
+          <li>9¢ / kWh usage rate</li>
+        </ul>
+        <button class="toggle-button">Learn more ▼</button>
+        <div class="details">
           <ul>
-            <li>Twice the backup storage</li>
-            <li>No installation fee</li>
-            <li>9¢ / kWh usage rate</li>
+            <li>40–60 hours of backup with reduced energy use</li>
+            <li>36-month term</li>
+            <li>Join a cleaner, more stable grid</li>
           </ul>
-          <button class="toggle-button">Learn more ▼</button>
-          <div class="details">
-            <ul>
-              <li>40–60 hours of backup with reduced energy use</li>
-              <li>36-month term</li>
-              <li>Join a cleaner, more stable grid</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section" id="faqs">
-    <div class="container">
-      <h2>FAQs</h2>
-      <div class="faq">
-        <h3>Do I own the battery?</h3>
-        <p>No. Think Energy owns and maintains the system for you. You just enjoy the benefits.</p>
-      </div>
-      <div class="faq">
-        <h3>What happens during a power outage?</h3>
-        <p>Your battery powers your essential circuits so you can keep lights, appliances, and Wi-Fi running.</p>
-      </div>
-      <div class="faq">
-        <h3>Do I need solar panels to participate?</h3>
-        <p>No. This program is for anyone who wants battery backup. Solar is not required.</p>
-      </div>
+    <h2>FAQs</h2>
+    <div class="faq">
+      <h4>Do I own the battery?</h4>
+      <p>No. Think Energy owns and maintains the system for you. You just enjoy the benefits.</p>
+    </div>
+    <div class="faq">
+      <h4>What happens during a power outage?</h4>
+      <p>Your battery powers your essential circuits so you can keep lights, appliances, and Wi-Fi running.</p>
+    </div>
+    <div class="faq">
+      <h4>Do I need solar panels to participate?</h4>
+      <p>No. This program is for anyone who wants battery backup. Solar is not required.</p>
     </div>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Think Energy. All rights reserved.</p>
-  </footer>
 
   <script>
     function toggleDetails(button) {
