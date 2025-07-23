@@ -5,61 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Think Energy VPP</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">
-      <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy logo">
+    <div class="container nav-content">
+      <img src="https://i.imgur.com/zmc1NnF.png" alt="Think Energy Logo" class="logo" />
+      <nav>
+        <a href="#promise">Our Promise</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faqs">FAQs</a>
+      </nav>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#promise">Our Promise</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-      </ul>
-    </nav>
   </header>
 
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-text">
-      <h1>Reliable Backup.</h1>
-      <p>Storm-proof backup and the lowest transparent rate on the market—no $18k battery purchase required.</p>
+    <div class="hero-overlay">
+      <div class="container">
+        <h1>Reliable Backup. No Upfront Cost.</h1>
+        <p>Storm-proof backup and the lowest transparent rate in the market—no $18k battery purchase required.</p>
+      </div>
     </div>
   </section>
 
-  <main>
-    <section id="promise" class="section">
+  <section class="section" id="promise">
+    <div class="container">
       <h2>Our Promise</h2>
-      <p>
-        Think Energy gives you a battery for your home without the massive upfront cost.
-        Stay powered. Stay secure. Join our Virtual Power Plant.
-      </p>
-    </section>
+      <p>Think Energy gives you a battery for your home without the massive upfront cost. Stay powered. Stay secure. Join our Virtual Power Plant.</p>
+    </div>
+  </section>
 
-    <section id="pricing" class="section">
+  <section class="section alt" id="pricing">
+    <div class="container">
       <h2>Simple, Transparent Pricing</h2>
-      <div class="pricing-box">
-        <h3>1 Battery</h3>
-        <p class="price">$20/month</p>
-        <ul>
-          <li>Backup for essential circuits</li>
-          <li>No upfront cost</li>
-          <li>Free installation</li>
-        </ul>
-      </div>
-      <div class="pricing-box">
-        <h3>2 Batteries</h3>
-        <p class="price">$40/month</p>
-        <ul>
-          <li>Whole home backup</li>
-          <li>No upfront cost</li>
-          <li>Free installation</li>
-        </ul>
-      </div>
-    </section>
 
-    <section id="faqs" class="section">
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>1 Battery</h3>
+          <p class="price">$20/month</p>
+          <ul>
+            <li>Backup for essential circuits</li>
+            <li>No upfront cost</li>
+            <li>Free installation</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <h3>2 Batteries</h3>
+          <p class="price">$40/month</p>
+          <ul>
+            <li>Whole home backup</li>
+            <li>No upfront cost</li>
+            <li>Free installation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faqs">
+    <div class="container">
       <h2>FAQs</h2>
       <div class="faq">
         <h4>Do I own the battery?</h4>
@@ -73,7 +78,13 @@
         <h4>Can I cancel?</h4>
         <p>You can cancel at any time. We'll arrange for removal at no cost if you're no longer enrolled in our energy plan.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Think Energy. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
