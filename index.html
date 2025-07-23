@@ -100,6 +100,15 @@
       button.textContent = details.classList.contains("show") ? "Hide details" : "Learn more";
     }
   </script>
+  <script>
+  document.querySelectorAll('.toggle-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const details = button.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+      button.textContent = details.style.display === 'block' ? 'Show less ▲' : 'Learn more ▼';
+    });
+  });
+</script>
 </body>
 
 </html>
