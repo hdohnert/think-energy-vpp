@@ -261,7 +261,7 @@ body {
 }
 
 .promise-list .check {
-  color: #28a745;
+  color: #007bff; /* Blue checkmark */
   font-weight: bold;
   margin-right: 0.75rem;
   font-size: 1.2rem;
