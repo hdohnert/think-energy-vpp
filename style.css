@@ -1,169 +1,202 @@
-/* General resets */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Global Reset and Font */
 body {
+  margin: 0;
   font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #111;
   line-height: 1.6;
-  color: #1a1a1a;
-  background: #f9f9f9;
 }
 
-/* Sticky header styles */
-header {
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+/* Sticky Navbar */
+.navbar {
   position: sticky;
   top: 0;
-  z-index: 999;
-}
-
-nav {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  background: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
 }
 
-nav .logo {
-  height: 48px;
-  border-radius: 6px;
+.navbar .logo {
+  height: 40px;
+  object-fit: contain;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-nav a {
+.navbar nav a {
+  margin-left: 20px;
   text-decoration: none;
-  color: #004aad;
-  font-weight: 600;
+  color: #0044cc;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #0077cc;
+.navbar nav a:hover {
+  color: #003399;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;
-  text-align: center;
+  padding: 120px 30px 100px;
   color: white;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.hero-text p {
-  font-size: 1.25rem;
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Section wrapper */
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Section Layout */
 .section {
-  padding: 60px 20px;
-  background: #fff;
-}
-
-.container {
+  padding: 60px 30px 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Pricing cards */
-.pricing-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin-top: 2rem;
+.section h2 {
+  font-size: 2rem;
+  color: #003399;
+  margin-bottom: 20px;
 }
 
-.card {
-  background: #f5faff;
-  border: 1px solid #e0eafc;
+/* Pricing Cards */
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pricing-card {
+  background-color: #f6faff;
   border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
+.pricing-card:hover {
+  transform: translateY(-5px);
 }
 
-.card h3 {
-  color: #004aad;
-  margin-bottom: 0.5rem;
+.pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.pricing-header h3 {
+  font-size: 1.25rem;
+  color: #003399;
+  margin: 0;
 }
 
 .price {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: #333;
 }
 
-.card ul {
-  margin-bottom: 1rem;
-  padding-left: 1.2rem;
+.pricing-card ul {
+  padding-left: 20px;
+  margin: 10px 0 20px;
 }
 
-.card li {
-  margin-bottom: 0.5rem;
+.pricing-card li {
+  margin-bottom: 8px;
 }
 
-/* Toggle button */
-.toggle-button {
-  background: none;
+/* Expand Button + Details */
+.expand-btn {
+  background-color: #003399;
+  color: white;
   border: none;
-  color: #004aad;
-  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 0.5rem;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.toggle-button:hover {
-  color: #0077cc;
+.expand-btn:hover {
+  background-color: #002f80;
 }
 
-/* Collapsible details with animation */
 .details {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  opacity: 0;
+  display: none;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  animation: fadeIn 0.4s ease;
 }
 
 .details.show {
-  max-height: 500px;
-  opacity: 1;
-  margin-top: 1rem;
+  display: block;
 }
 
-/* FAQ section */
-.faq h3 {
-  margin-top: 1.5rem;
-  color: #004aad;
+.details ul {
+  padding-left: 20px;
+  margin: 0;
 }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #f1f1f1;
-  color: #777;
-  font-size: 0.9rem;
+.details li {
+  margin-bottom: 6px;
+}
+
+/* FAQ */
+.faq {
+  margin-bottom: 30px;
+}
+
+.faq h4 {
+  margin-bottom: 8px;
+  color: #003399;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
