@@ -6,88 +6,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Think Energy VPP</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <div class="container header-flex">
-      <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy Logo" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faqs">FAQs</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="navbar">
+    <img src="https://i.imgur.com/w6C9cKP.png" alt="Think Energy Logo" class="logo" />
+    <nav>
+      <a href="#promise">Our Promise</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faqs">FAQs</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Storm-Proof Backup with Transparent Pricing</h1>
-      <p class="tagline">No $18k battery purchase required. Just simple monthly service.</p>
+  <section class="hero" style="background-image: url('https://i.imgur.com/ckI6Pqq.jpeg')">
+    <div class="hero-text">
+      <h1>Reliable Backup Without the Big Price Tag</h1>
+      <p>Battery backup and the lowest transparent rate in Texas. No $18k battery purchase required.</p>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>Why Think Energy?</h2>
-      <p>We make energy storage simple, reliable, and affordable. Our Virtual Power Plant program puts backup power in your hands without the steep cost of ownership. We install top-tier battery systems at no upfront cost—just a flat monthly fee. Stay online during outages, lower your energy bill, and help stabilize the grid—all with Think Energy.</p>
-    </div>
+  <section class="section" id="promise">
+    <h2>Our Promise</h2>
+    <p>Think Energy gives you a battery for your home without the massive upfront cost. Stay powered. Stay secure. Join our Virtual Power Plant.</p>
   </section>
 
-  <section id="pricing" class="pricing">
-    <div class="container">
-      <h2>Transparent, Simple Pricing</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>20 kWh Plan</h3>
-          <div class="price">$20/mo</div>
-          <ul>
-            <li>Storm-proof backup</li>
-            <li>No installation fee</li>
-            <li>9¢ / kWh usage rate</li>
-            <li>Battery owned by Think Energy</li>
-          </ul>
-        </div>
-        <div class="pricing-card">
-          <h3>40 kWh Plan</h3>
-          <div class="price">$40/mo</div>
-          <ul>
-            <li>Twice the backup storage</li>
-            <li>No installation fee</li>
-            <li>9¢ / kWh usage rate</li>
-            <li>Battery owned by Think Energy</li>
-          </ul>
-        </div>
+  <section class="section pricing" id="pricing">
+    <h2>Transparent, Simple Pricing</h2>
+
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <h3>20 kWh Plan</h3>
+        <span class="price">$20/mo</span>
+      </div>
+      <ul>
+        <li>Storm-proof backup</li>
+        <li>No installation fee</li>
+        <li>9¢ / kWh usage rate</li>
+      </ul>
+      <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
+      <div class="details">
+        <ul>
+          <li>20–30 hours of backup with reduced energy use</li>
+          <li>36-month term</li>
+          <li>Join a cleaner, more stable grid</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <h3>40 kWh Plan</h3>
+        <span class="price">$40/mo</span>
+      </div>
+      <ul>
+        <li>Twice the backup storage</li>
+        <li>No installation fee</li>
+        <li>9¢ / kWh usage rate</li>
+      </ul>
+      <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
+      <div class="details">
+        <ul>
+          <li>40–60 hours of backup with reduced energy use</li>
+          <li>36-month term</li>
+          <li>Join a cleaner, more stable grid</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="faqs" class="faqs">
-    <div class="container">
-      <h2>FAQs</h2>
-      <div class="faq">
-        <h4>Do I need to buy the battery?</h4>
-        <p>No, the battery is installed and maintained by Think Energy as part of your monthly service.</p>
-      </div>
-      <div class="faq">
-        <h4>Is there any upfront cost?</h4>
-        <p>No. We cover installation and equipment. You only pay the monthly fee and usage rate.</p>
-      </div>
-      <div class="faq">
-        <h4>What happens during a power outage?</h4>
-        <p>Your battery automatically kicks in to provide backup power to critical loads in your home.</p>
-      </div>
+  <section class="section" id="faqs">
+    <h2>FAQs</h2>
+    <div class="faq">
+      <h4>Do I own the battery?</h4>
+      <p>No. Think Energy owns and maintains the system for you. You just enjoy the benefits.</p>
+    </div>
+    <div class="faq">
+      <h4>What happens during a power outage?</h4>
+      <p>Your battery powers your essential circuits so you can keep lights, appliances, and Wi-Fi running.</p>
+    </div>
+    <div class="faq">
+      <h4>Do I need solar panels to participate?</h4>
+      <p>No. This program is for anyone who wants battery backup. Solar is not required.</p>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Think Energy. All rights reserved.</p>
-    </div>
-  </footer>
+  <script>
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      details.classList.toggle("show");
+      button.textContent = details.classList.contains("show") ? "Hide details" : "Learn more";
+    }
+  </script>
 </body>
 
 </html>
