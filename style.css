@@ -1,149 +1,192 @@
-/* General Reset and Font */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #ffffff;
-  color: #222;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #111;
   line-height: 1.6;
 }
 
-/* Header and Navigation */
-header {
-  background-color: #ffffff;
+a {
+  text-decoration: none;
+  color: #0052cc;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Navbar */
+nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
+  background-color: white;
   border-bottom: 1px solid #eee;
 }
 
-header img.logo {
-  height: 40px;
+nav img.logo {
+  height: 35px;
 }
 
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #1a5d3e;
-  font-weight: 600;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav li a {
+  font-weight: bold;
+  color: #003399;
+  transition: color 0.2s ease;
+}
+
+nav li a:hover {
+  color: #001f66;
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('https://i.imgur.com/mPc0DNY.jpeg');
+  background-image: url('https://i.imgur.com/ckI6Pqq.jpeg');
   background-size: cover;
   background-position: center;
-  color: white;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 5rem 2rem;
+  color: white;
+  padding: 2rem;
   position: relative;
 }
 
 .hero::after {
-  content: "";
+  content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
-  font-size: 2.75rem;
-  margin-bottom: 1rem;
+  position: relative;
+  font-size: 2.5rem;
+  z-index: 2;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
-/* Section Layout */
+/* Sections */
 section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 3rem 1rem;
+  background-color: white;
 }
 
 section h2 {
-  text-align: center;
-  color: #1a5d3e;
-  margin-bottom: 2rem;
   font-size: 2rem;
+  color: #003399;
+  margin-bottom: 1rem;
 }
 
-/* Pricing Plans */
+section p {
+  max-width: 700px;
+}
+
+/* Pricing Cards */
 .pricing-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-.pricing-card {
-  border: 1px solid #ddd;
+.card {
+  background: #f5faff;
+  border: 1px solid #cce0ff;
   border-radius: 12px;
   padding: 2rem;
-  width: 280px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
-.pricing-card:hover {
+.card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-.pricing-card h3 {
-  color: #1a5d3e;
+.card h3 {
+  color: #0044cc;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-.pricing-card p {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
+.card .price {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 0;
+  color: #111;
 }
 
-/* FAQ */
-.faq {
-  max-width: 800px;
-  margin: 0 auto;
+.card ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.faq-item {
-  margin-bottom: 1.5rem;
+.card ul li {
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
 }
 
-.faq-item h4 {
-  color: #1a5d3e;
-  margin-bottom: 0.5rem;
+/* Expandable Section */
+.expandable {
+  margin-top: 1rem;
 }
 
-.faq-item p {
+.toggle-button {
+  background-color: transparent;
+  border: none;
+  color: #0066cc;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.details {
+  display: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.95rem;
   color: #333;
-  line-height: 1.5;
+}
+
+/* FAQs */
+.faq h3 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #003399;
 }
 
 /* Footer */
 footer {
-  background-color: #1a5d3e;
-  color: white;
+  background: #f1f1f1;
+  padding: 2rem;
   text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #555;
 }
