@@ -2,128 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Think Energy VPP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1em 2em;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    header img {
-      height: 40px;
-    }
-    nav a {
-      margin-left: 2em;
-      text-decoration: none;
-      color: #00754a;
-      font-weight: 600;
-    }
-    .hero {
-      background: url('https://i.imgur.com/WIvtxCX.jpeg') center/cover no-repeat;
-      padding: 5em 2em;
-      text-align: center;
-      color: white;
-      background-color: #002776;
-      position: relative;
-    }
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-    }
-    .hero p {
-      font-size: 1.25em;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    }
-    section {
-      padding: 3em 2em;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #002776;
-    }
-    .faqs {
-      background: #f0f4f2;
-      padding: 3em 2em;
-    }
-    .faq {
-      margin-bottom: 1.5em;
-    }
-    .faq h3 {
-      margin-bottom: 0.5em;
-      color: #00754a;
-    }
-    footer {
-      background: #002776;
-      color: white;
-      padding: 2em;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy logo" />
-    <nav>
-      <a href="#promise">Our Promise</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faqs">FAQs</a>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Power Your Home with Think Energy</h1>
-    <p>Storm-proof backup and the lowest transparent rate on the market—no $18k battery purchase required.</p>
-  </section>
-
-  <section id="promise">
-    <h2>Our Promise</h2>
-    <p>We provide battery backup for your home without the massive upfront cost. Stay powered, stay secure, and join our Virtual Power Plant network today.</p>
-  </section>
-
-  <section id="pricing">
-    <h2>Simple, Transparent Pricing</h2>
-    <ul>
-      <li><strong>$10/month</strong> - Includes one battery and backup coverage for essential circuits</li>
-      <li><strong>$20/month</strong> - For homes with higher loads or two batteries</li>
-      <li>No hidden fees, no credit checks, and no equipment to purchase upfront</li>
-    </ul>
-  </section>
-
-  <section class="faqs" id="faqs">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq">
-      <h3>Is there a contract?</h3>
-      <p>Yes, customers commit to a 36-month term, but there are no hidden early termination fees.</p>
-    </div>
-    <div class="faq">
-      <h3>What happens during a power outage?</h3>
-      <p>Your battery automatically powers key appliances and circuits, keeping your home running.</p>
-    </div>
-    <div class="faq">
-      <h3>Who installs the battery?</h3>
-      <p>Think Energy coordinates licensed electricians and delivery partners to make installation fast and seamless.</p>
-    </div>
-    <div class="faq">
-      <h3>How does Think Energy make money?</h3>
-      <p>We participate in Virtual Power Plant markets and pass the value back to you in the form of low pricing.</p>
+  <section class="hero" style="background-image: url('https://i.imgur.com/mPc0DNY.jpeg')">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Reliable Backup. Simple Pricing.</h1>
+      <p>Storm-proof backup and the lowest transparent rate on the market—no $18k battery purchase required.</p>
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Think Energy. All rights reserved.
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p>We install a powerful battery system at your home. During outages, it keeps your power on. Every day, it helps stabilize the grid and lower your energy costs.</p>
+      <ul>
+        <li>✔️ Backup power during outages</li>
+        <li>✔️ Participate in grid-saving events</li>
+        <li>✔️ No up-front costs, no maintenance fees</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section alt" id="pricing">
+    <div class="container">
+      <h2>Simple, Transparent Pricing</h2>
+      <div class="pricing-cards">
+        <div class="card">
+          <h3>20 kWh System</h3>
+          <p class="price">$20/month</p>
+          <p>No installation fee. Includes backup and energy savings.</p>
+        </div>
+        <div class="card">
+          <h3>40 kWh System</h3>
+          <p class="price">$40/month</p>
+          <p>More capacity, same reliable service. Still no installation fee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>FAQs</h2>
+      <div class="faq">
+        <h4>Do I own the battery?</h4>
+        <p>No. Think Energy owns and maintains the system for you. You just enjoy the benefits.</p>
+        <h4>What happens during a power outage?</h4>
+        <p>Your battery automatically powers your home, keeping lights, appliances, and Wi-Fi running.</p>
+        <h4>Can I cancel?</h4>
+        <p>You can cancel at any time. We'll arrange for removal at no cost if you're no longer enrolled in our energy plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Think Energy. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
