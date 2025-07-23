@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Think Energy VPP</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="navbar">
-    <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy Logo" class="logo" />
+    <img src="https://i.imgur.com/BKZ8GhW.png" alt="Think Energy Logo" class="logo" />
     <nav>
       <a href="#promise">Our Promise</a>
       <a href="#pricing">Pricing</a>
@@ -35,41 +35,46 @@
 
   <section class="section pricing" id="pricing">
     <h2>Transparent, Simple Pricing</h2>
-    <div class="pricing-grid">
-      <div class="card">
-        <h3>20 kWh Plan</h3>
-        <p class="price">$20/mo</p>
-        <ul>
-          <li>Storm-proof backup</li>
-          <li>No installation fee</li>
-          <li>9¢ / kWh usage rate</li>
-        </ul>
-        <button class="toggle-button">Learn more ▼</button>
-        <div class="details">
-          <ul>
-            <li>20–30 hours of backup with reduced energy use</li>
-            <li>36-month term</li>
-            <li>Join a cleaner, more stable grid</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="card">
-        <h3>40 kWh Plan</h3>
-        <p class="price">$40/mo</p>
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <h3>20 kWh Plan</h3>
+        <span class="price">$20/mo</span>
+      </div>
+      <ul>
+        <li>Storm-proof backup</li>
+        <li>No installation fee</li>
+        <li>9¢ / kWh usage rate</li>
+      </ul>
+      <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
+      <div class="details">
         <ul>
-          <li>Twice the backup storage</li>
-          <li>No installation fee</li>
-          <li>9¢ / kWh usage rate</li>
+          <li>20–30 hours of backup with reduced energy use</li>
+          <li>36-month term</li>
+          <li>Join a cleaner, more stable grid</li>
         </ul>
-        <button class="toggle-button">Learn more ▼</button>
-        <div class="details">
-          <ul>
-            <li>40–60 hours of backup with reduced energy use</li>
-            <li>36-month term</li>
-            <li>Join a cleaner, more stable grid</li>
-          </ul>
-        </div>
+        <p class="placeholder">This is where additional detail will go about the plan's benefits, installation process, and VPP participation details.</p>
+      </div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-header">
+        <h3>40 kWh Plan</h3>
+        <span class="price">$40/mo</span>
+      </div>
+      <ul>
+        <li>Twice the backup storage</li>
+        <li>No installation fee</li>
+        <li>9¢ / kWh usage rate</li>
+      </ul>
+      <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
+      <div class="details">
+        <ul>
+          <li>40–60 hours of backup with reduced energy use</li>
+          <li>36-month term</li>
+          <li>Join a cleaner, more stable grid</li>
+        </ul>
+        <p class="placeholder">This is where additional detail will go about the plan's benefits, installation process, and VPP participation details.</p>
       </div>
     </div>
   </section>
@@ -94,12 +99,8 @@
     function toggleDetails(button) {
       const details = button.nextElementSibling;
       details.classList.toggle("show");
-      button.textContent = details.classList.contains("show") ? "Show less ▲" : "Learn more ▼";
+      button.textContent = details.classList.contains("show") ? "Hide details" : "Learn more";
     }
-
-    document.querySelectorAll('.toggle-button').forEach(button => {
-      button.addEventListener('click', () => toggleDetails(button));
-    });
   </script>
 </body>
 
