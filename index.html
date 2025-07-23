@@ -1,82 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Think Energy VPP</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <header class="header">
-    <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think Energy VPP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
       <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy Logo" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faq">FAQs</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero" style="background-image: url('https://i.imgur.com/mPc0DNY.jpeg')">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Reliable Backup. Simple Pricing.</h1>
-      <p>Storm-proof backup and the lowest transparent rate on the market—no $18k battery purchase required.</p>
-    </div>
-  </section>
-
-  <section class="section" id="how-it-works">
-    <div class="container">
-      <h2>How It Works</h2>
-      <p>We install a powerful battery system at your home. During outages, it keeps your power on. Every day, it helps stabilize the grid and lower your energy costs.</p>
-      <ul>
-        <li>✔️ Backup power during outages</li>
-        <li>✔️ Participate in grid-saving events</li>
-        <li>✔️ No up-front costs, no maintenance fees</li>
+      <ul class="nav-links">
+        <li><a href="#promise">Our Promise</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faqs">FAQs</a></li>
       </ul>
-    </div>
-  </section>
+    </nav>
 
-  <section class="section alt" id="pricing">
-    <div class="container">
+    <section
+      class="hero"
+      style="background-image: url('https://i.imgur.com/ckI6Pqq.jpeg');"
+    >
+      <div class="hero-content">
+        <h1>Reliable Backup.</h1>
+        <p>
+          Storm-proof backup and the lowest transparent rate on the market&mdash;no
+          $18k battery purchase required.
+        </p>
+      </div>
+    </section>
+
+    <section class="promise" id="promise">
+      <h2>Our Promise</h2>
+      <p>
+        Think Energy gives you a battery for your home without the massive
+        upfront cost. Stay powered. Stay secure. Join our Virtual Power Plant.
+      </p>
+    </section>
+
+    <section class="pricing" id="pricing">
       <h2>Simple, Transparent Pricing</h2>
-      <div class="pricing-cards">
-        <div class="card">
-          <h3>20 kWh System</h3>
+      <div class="pricing-boxes">
+        <div class="price-card">
+          <h3>1 Battery</h3>
           <p class="price">$20/month</p>
-          <p>No installation fee. Includes backup and energy savings.</p>
+          <ul>
+            <li>Backup for essential circuits</li>
+            <li>No upfront cost</li>
+            <li>Free installation</li>
+          </ul>
         </div>
-        <div class="card">
-          <h3>40 kWh System</h3>
+        <div class="price-card">
+          <h3>2 Batteries</h3>
           <p class="price">$40/month</p>
-          <p>More capacity, same reliable service. Still no installation fee.</p>
+          <ul>
+            <li>Whole-home backup</li>
+            <li>No upfront cost</li>
+            <li>Free installation</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="faq">
-    <div class="container">
+    <section class="faq-section" id="faqs">
       <h2>FAQs</h2>
-      <div class="faq">
-        <h4>Do I own the battery?</h4>
+
+      <div class="faq-item">
+        <h3>Do I own the battery?</h3>
         <p>No. Think Energy owns and maintains the system for you. You just enjoy the benefits.</p>
-        <h4>What happens during a power outage?</h4>
+      </div>
+
+      <div class="faq-item">
+        <h3>What happens during a power outage?</h3>
         <p>Your battery automatically powers your home, keeping lights, appliances, and Wi-Fi running.</p>
-        <h4>Can I cancel?</h4>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I cancel?</h3>
         <p>You can cancel at any time. We'll arrange for removal at no cost if you're no longer enrolled in our energy plan.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
+    <footer>
       <p>&copy; 2025 Think Energy. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
