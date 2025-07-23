@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Battery Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f9ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .battery-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .battery {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      border: 6px solid #007bff;
+      border-radius: 12px;
+      box-sizing: border-box;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .battery::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 35%;
+      width: 12px;
+      height: 30%;
+      background-color: #007bff;
+      border-radius: 3px;
+    }
+
+    .charge {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0%;
+      background: linear-gradient(90deg, #00c9ff, #007bff);
+      animation: charge-animation 3s linear infinite;
+    }
+
+    @keyframes charge-animation {
+      0% {
+        width: 0%;
+      }
+      50% {
+        width: 100%;
+      }
+      100% {
+        width: 0%;
+      }
+    }
+
+    .label {
+      font-size: 1.2rem;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="battery-wrapper">
+    <div class="battery">
+      <div class="charge"></div>
+    </div>
+    <div class="label">Charging Your Home</div>
+  </div>
+</body>
+</html>
