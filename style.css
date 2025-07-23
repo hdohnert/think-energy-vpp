@@ -1,192 +1,169 @@
-/* Reset & Base */
+/* General resets */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #111;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  color: #1a1a1a;
+  background: #f9f9f9;
 }
 
-a {
+/* Sticky header styles */
+header {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  height: 48px;
+  border-radius: 6px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
   text-decoration: none;
-  color: #0052cc;
+  color: #004aad;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
+nav a:hover {
+  color: #0077cc;
+}
+
+/* Hero */
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+}
+
+/* Section wrapper */
+.section {
+  padding: 60px 20px;
+  background: #fff;
 }
 
 .container {
   max-width: 1100px;
-  margin: auto;
-  padding: 2rem;
+  margin: 0 auto;
 }
 
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  border-bottom: 1px solid #eee;
-}
-
-nav img.logo {
-  height: 35px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav li a {
-  font-weight: bold;
-  color: #003399;
-  transition: color 0.2s ease;
-}
-
-nav li a:hover {
-  color: #001f66;
-}
-
-/* Hero Section */
-.hero {
-  background-image: url('https://i.imgur.com/ckI6Pqq.jpeg');
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  position: relative;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.hero h1 {
-  position: relative;
-  font-size: 2.5rem;
-  z-index: 2;
-}
-
-.hero p {
-  position: relative;
-  z-index: 2;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-/* Sections */
-section {
-  padding: 3rem 1rem;
-  background-color: white;
-}
-
-section h2 {
-  font-size: 2rem;
-  color: #003399;
-  margin-bottom: 1rem;
-}
-
-section p {
-  max-width: 700px;
-}
-
-/* Pricing Cards */
+/* Pricing cards */
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 2rem;
 }
 
 .card {
   background: #f5faff;
-  border: 1px solid #cce0ff;
-  border-radius: 12px;
+  border: 1px solid #e0eafc;
+  border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .card h3 {
-  color: #0044cc;
-  font-size: 1.25rem;
+  color: #004aad;
   margin-bottom: 0.5rem;
 }
 
-.card .price {
+.price {
   font-size: 1.5rem;
-  margin: 0.5rem 0 1rem 0;
-  color: #111;
-}
-
-.card ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.card ul li {
-  padding: 0.25rem 0;
-  font-size: 0.95rem;
-}
-
-/* Expandable Section */
-.expandable {
-  margin-top: 1rem;
-}
-
-.toggle-button {
-  background-color: transparent;
-  border: none;
-  color: #0066cc;
   font-weight: bold;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-.details {
-  display: none;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ddd;
-  font-size: 0.95rem;
+  margin-bottom: 1rem;
   color: #333;
 }
 
-/* FAQs */
-.faq h3 {
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-  color: #003399;
+.card ul {
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
 }
 
-/* Footer */
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Toggle button */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #004aad;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #0077cc;
+}
+
+/* Collapsible details with animation */
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.details.show {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* FAQ section */
+.faq h3 {
+  margin-top: 1.5rem;
+  color: #004aad;
+}
+
 footer {
-  background: #f1f1f1;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem;
+  background: #f1f1f1;
+  color: #777;
   font-size: 0.9rem;
-  color: #555;
 }
