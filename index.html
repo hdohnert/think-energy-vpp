@@ -1,54 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Think Energy VPP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em 2em;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    header img {
+      height: 40px;
+    }
+    nav a {
+      margin-left: 2em;
+      text-decoration: none;
+      color: #00754a;
+      font-weight: 600;
+    }
+    .hero {
+      background: url('https://i.imgur.com/WIvtxCX.jpeg') center/cover no-repeat;
+      padding: 5em 2em;
+      text-align: center;
+      color: white;
+      background-color: #002776;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.25em;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    section {
+      padding: 3em 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #002776;
+    }
+    .faqs {
+      background: #f0f4f2;
+      padding: 3em 2em;
+    }
+    .faq {
+      margin-bottom: 1.5em;
+    }
+    .faq h3 {
+      margin-bottom: 0.5em;
+      color: #00754a;
+    }
+    footer {
+      background: #002776;
+      color: white;
+      padding: 2em;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy Logo" class="logo" />
+  <header>
+    <img src="https://i.imgur.com/WIvtxCX.jpeg" alt="Think Energy logo" />
     <nav>
       <a href="#promise">Our Promise</a>
       <a href="#pricing">Pricing</a>
+      <a href="#faqs">FAQs</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-overlay">
-      <h1>Power Your Home with Think Energy</h1>
-      <p>Battery backup for your home without the massive upfront cost. Stay powered, stay secure, and join our Virtual Power Plant network today.</p>
-    </div>
+    <h1>Power Your Home with Think Energy</h1>
+    <p>Storm-proof backup and the lowest transparent rate on the market—no $18k battery purchase required.</p>
   </section>
 
-  <section id="promise" class="content-section">
+  <section id="promise">
     <h2>Our Promise</h2>
-    <p><strong>Storm-proof backup and the lowest transparent rate on the market—no $18k battery purchase required.</strong></p>
+    <p>We provide battery backup for your home without the massive upfront cost. Stay powered, stay secure, and join our Virtual Power Plant network today.</p>
   </section>
 
-  <section id="pricing" class="content-section alt-bg">
+  <section id="pricing">
     <h2>Simple, Transparent Pricing</h2>
-    <div class="pricing-boxes">
-      <div class="price-card">
-        <h3>20 kWh System</h3>
-        <p><strong>$20/month</strong></p>
-        <p>+ 9¢ per kWh usage</p>
-        <p>No installation fee</p>
-      </div>
-      <div class="price-card">
-        <h3>40 kWh System</h3>
-        <p><strong>$40/month</strong></p>
-        <p>+ 9¢ per kWh usage</p>
-        <p>No installation fee</p>
-      </div>
+    <ul>
+      <li><strong>$10/month</strong> - Includes one battery and backup coverage for essential circuits</li>
+      <li><strong>$20/month</strong> - For homes with higher loads or two batteries</li>
+      <li>No hidden fees, no credit checks, and no equipment to purchase upfront</li>
+    </ul>
+  </section>
+
+  <section class="faqs" id="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Is there a contract?</h3>
+      <p>Yes, customers commit to a 36-month term, but there are no hidden early termination fees.</p>
+    </div>
+    <div class="faq">
+      <h3>What happens during a power outage?</h3>
+      <p>Your battery automatically powers key appliances and circuits, keeping your home running.</p>
+    </div>
+    <div class="faq">
+      <h3>Who installs the battery?</h3>
+      <p>Think Energy coordinates licensed electricians and delivery partners to make installation fast and seamless.</p>
+    </div>
+    <div class="faq">
+      <h3>How does Think Energy make money?</h3>
+      <p>We participate in Virtual Power Plant markets and pass the value back to you in the form of low pricing.</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Think Energy. All rights reserved.</p>
+    &copy; 2025 Think Energy. All rights reserved.
   </footer>
 </body>
 </html>
