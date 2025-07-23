@@ -1,94 +1,186 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
+  color: #222;
+  line-height: 1.6;
   background-color: #f9f9f9;
-  color: #111;
 }
 
-.navbar {
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
   background-color: #002776;
-  color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
+}
+
+.header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  height: 48px;
+  height: 40px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 4px;
 }
 
-.navbar nav a {
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
+nav a:hover {
+  color: #00c46f;
+}
+
+/* Hero Section */
 .hero {
-  background-image: url('https://i.imgur.com/WIvtxCX.jpeg');
   background-size: cover;
   background-position: center;
-  height: 350px;
   position: relative;
+  color: white;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.hero-overlay {
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.45);
   position: absolute;
-  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 39, 118, 0.6);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
+  top: 0;
+  left: 0;
 }
 
-.hero-overlay h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.content-section {
-  padding: 3rem 2rem;
-  max-width: 960px;
-  margin: auto;
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
-.content-section.alt-bg {
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section.alt {
   background-color: #f0f4f8;
 }
 
-h2 {
+.section h2 {
+  font-size: 2rem;
   color: #002776;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.pricing-boxes {
+.section p,
+.section ul {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.section ul {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.section ul li {
+  margin: 0.5rem 0;
+}
+
+/* Pricing Cards */
+.pricing-cards {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-}
-
-.price-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 280px;
-}
-
-footer {
-  background: #ddd;
-  text-align: center;
-  padding: 1rem;
   margin-top: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  width: 280px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #002776;
+  margin-bottom: 0.5rem;
+}
+
+.card .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00c46f;
+  margin-bottom: 0.5rem;
+}
+
+/* FAQ */
+.faq {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.faq h4 {
+  margin-top: 1.5rem;
+  color: #002776;
+  font-weight: 600;
+}
+
+.faq p {
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #002776;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
 }
