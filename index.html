@@ -87,53 +87,61 @@
 <section class="section" id="faqs">
   <h2>FAQs</h2>
 
-  <div class="faq">
-    <h4>Will I still use Think Energy as my electricity provider?</h4>
-    <p>Yes. When you sign up, you’ll receive power from Think Energy as your official electricity provider. We’ll supply your home with affordable electricity and handle billing, service, and support.</p>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleDetails(this)">Who will supply my electricity?</button>
+    <div class="faq-answer">
+      <p>Think Energy will be your electricity provider. Your electricity bill and service will come from us — just like any other provider in Texas. We’ll also provide and manage your backup battery system.</p>
+    </div>
   </div>
 
-  <div class="faq">
-    <h4>How does Think Energy make money?</h4>
-    <p>We use your battery to support the electricity grid when there's no outage. This allows us to recover the cost of the battery system and installation — while still offering you a low, fixed electricity rate. It’s a win-win: reliable backup for you, and better grid performance for everyone.</p>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleDetails(this)">How does Think Energy make money?</button>
+    <div class="faq-answer">
+      <p>When there’s no outage, we use your battery to perform grid services that support Texas’s electricity system. This allows us to recover the cost of your battery and installation — while still offering you a low, fixed electricity rate. You get backup power and savings, and we handle everything behind the scenes.</p>
+    </div>
   </div>
 
-  <div class="faq">
-    <h4>How long does my battery last during a power outage?</h4>
-    <p>The backup duration depends on four key factors:</p>
-    <ul class="faq-list">
-      <li><strong>Power usage:</strong> The more devices you run (like central A/C or electric dryers), the faster the battery drains. Limiting usage helps extend runtime.</li>
-      <li><strong>Battery charge at the time of outage:</strong> Your battery is typically well-charged, but due to grid-balancing usage, it may vary. It will never drop below 20% before an outage.</li>
-      <li><strong>System size:</strong> Homes have one battery (~20–25 kWh) or two (~50 kWh). More storage means more backup time.</li>
-      <li><strong>Solar or generator add-ons:</strong> If installed, these can extend backup time by recharging the battery during the outage.</li>
-    </ul>
-    <p>Here’s a rough idea of how long your system will last based on your usage:</p>
-    <ul class="faq-duration">
-      <li><strong>Low usage (750W):</strong> 20–30 hrs (1 battery), 40–60 hrs (2 batteries)</li>
-      <li><strong>Average usage (1.5kW):</strong> 10–15 hrs (1 battery), 20–30 hrs (2 batteries)</li>
-      <li><strong>High usage (8kW):</strong> 2–3 hrs (1 battery), 3–5 hrs (2 batteries)</li>
-    </ul>
-    <p>You’ll also be able to view your battery’s charge and estimated runtime from your Think Energy dashboard.</p>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleDetails(this)">How long will my battery last during an outage?</button>
+    <div class="faq-answer">
+      <p>Your battery duration depends on how much power you use, your battery size, and the charge level at the time of the outage. Here’s a general breakdown:</p>
+      <ul>
+        <li><strong>Low usage</strong> (750W — lights, fridge, some A/C): <br />• 1 battery: 20–30 hrs<br />• 2 batteries: 40–60 hrs</li>
+        <li><strong>Average usage</strong> (1.5kW — typical appliances, A/C): <br />• 1 battery: 10–15 hrs<br />• 2 batteries: 20–30 hrs</li>
+        <li><strong>High usage</strong> (8kW — electric heaters, heavy A/C): <br />• 1 battery: 2–3 hrs<br />• 2 batteries: 3–5 hrs</li>
+      </ul>
+      <p>Battery charge is typically high before an outage and never starts below 20%. If you have solar or a generator, it can extend your backup time further.</p>
+    </div>
   </div>
 
-  <div class="faq">
-    <h4>What should I expect on the day of installation?</h4>
-    <p>The installation process is simple and handled entirely by our team. Here’s what to expect:</p>
-    <ul class="faq-list">
-      <li><strong>Material drop-off:</strong> A pallet of equipment may be delivered before the crew arrives.</li>
-      <li><strong>Arrival window:</strong> Our crew typically arrives between 8 a.m. and 10 a.m.</li>
-      <li><strong>Temporary power shutoff:</strong> Expect 1–3 hours of planned disconnection as we reconfigure your wiring.</li>
-      <li><strong>Cleanup:</strong> Any packaging or leftover materials will be picked up later that day or the next morning.</li>
-    </ul>
-    <p>After installation, connect your system to your Wi-Fi network using your Think Energy dashboard. It may take up to 48 hours for the system to fully sync.</p>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleDetails(this)">What happens on installation day?</button>
+    <div class="faq-answer">
+      <p>Installation is usually completed in one day between 8 AM and 6 PM. Our team handles everything:</p>
+      <ul>
+        <li>We’ll drop off materials in advance.</li>
+        <li>The crew arrives between 8–10 AM.</li>
+        <li>Expect a 1–3 hour power shutoff while we wire your home for backup.</li>
+        <li>We return to collect leftover materials the same day or next.</li>
+      </ul>
+      <p>You don’t need to be home unless your breaker is in a locked garage or you want to guide battery placement.</p>
+    </div>
   </div>
 </section>
 
-  <script>
-    function toggleDetails(button) {
-      const details = button.nextElementSibling;
-      details.classList.toggle("show");
-      button.textContent = details.classList.contains("show") ? "Hide details" : "Learn more";
+<script>
+  function toggleDetails(button) {
+    const answer = button.nextElementSibling;
+    const isOpen = button.classList.contains("open");
+
+    document.querySelectorAll(".faq-question").forEach(q => q.classList.remove("open"));
+    document.querySelectorAll(".faq-answer").forEach(a => a.style.display = "none");
+
+    if (!isOpen) {
+      button.classList.add("open");
+      answer.style.display = "block";
     }
-  </script>
+  }
+</script>
 </body>
 </html>
