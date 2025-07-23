@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Think Energy VPP</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
   <header class="navbar">
-    <img src="https://i.imgur.com/BKZ8GhW.png" alt="Think Energy Logo" class="logo" />
+    <img src="logo.jpg" alt="Think Energy Logo" class="logo" />
     <nav>
       <a href="#promise">Our Promise</a>
       <a href="#pricing">Pricing</a>
@@ -21,7 +19,7 @@
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('https://i.imgur.com/ckI6Pqq.jpeg')">
+  <section class="hero" style="background-image: url('hero.jpg')">
     <div class="hero-text">
       <h1>Reliable Backup Without the Big Price Tag</h1>
       <p>Battery backup and the lowest transparent rate in Texas. No $18k battery purchase required.</p>
@@ -30,51 +28,45 @@
 
   <section class="section" id="promise">
     <h2>Our Promise</h2>
-    <p>Think Energy gives you a battery for your home without the massive upfront cost. Stay powered. Stay secure. Join our Virtual Power Plant.</p>
+    <p>
+      Think Energy gives you a battery for your home without the massive upfront cost.
+      Stay powered. Stay secure. Join our Virtual Power Plant.
+    </p>
   </section>
 
   <section class="section pricing" id="pricing">
     <h2>Transparent, Simple Pricing</h2>
-
-    <div class="pricing-card">
-      <div class="pricing-header">
-        <h3>20 kWh Plan</h3>
-        <span class="price">$20/mo</span>
-      </div>
-      <ul>
-        <li>Storm-proof backup</li>
-        <li>No installation fee</li>
-        <li>9¢ / kWh usage rate</li>
-      </ul>
-      <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
-      <div class="details">
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>20 kWh Plan</h3>
+          <span class="price">$20/mo</span>
+        </div>
         <ul>
-          <li>20–30 hours of backup with reduced energy use</li>
-          <li>36-month term</li>
-          <li>Join a cleaner, more stable grid</li>
+          <li>Storm-proof backup</li>
+          <li>No installation fee</li>
+          <li>9¢ / kWh usage rate</li>
         </ul>
-        <p class="placeholder">This is where additional detail will go about the plan's benefits, installation process, and VPP participation details.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
+        <div class="details">
+          <p>This is placeholder detail content for the 20 kWh plan. Add specifics about battery size, backup duration, etc.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="pricing-card">
-      <div class="pricing-header">
-        <h3>40 kWh Plan</h3>
-        <span class="price">$40/mo</span>
-      </div>
-      <ul>
-        <li>Twice the backup storage</li>
-        <li>No installation fee</li>
-        <li>9¢ / kWh usage rate</li>
-      </ul>
-      <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
-      <div class="details">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>40 kWh Plan</h3>
+          <span class="price">$40/mo</span>
+        </div>
         <ul>
-          <li>40–60 hours of backup with reduced energy use</li>
-          <li>36-month term</li>
-          <li>Join a cleaner, more stable grid</li>
+          <li>Twice the backup storage</li>
+          <li>No installation fee</li>
+          <li>9¢ / kWh usage rate</li>
         </ul>
-        <p class="placeholder">This is where additional detail will go about the plan's benefits, installation process, and VPP participation details.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)">Learn more</button>
+        <div class="details">
+          <p>This is placeholder detail content for the 40 kWh plan. Add specifics about longer runtime and use cases.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -103,5 +95,4 @@
     }
   </script>
 </body>
-
 </html>
